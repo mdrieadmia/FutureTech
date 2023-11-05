@@ -1,0 +1,279 @@
+/* ========Common CSS Start======= */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+}
+ul li, ol li{
+    list-style-type: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+/* ---------Common CSS Part End---------- */
+/* ========Menubar Part Start======= */
+.menubar{
+    width: 100%;
+    height: 80px;
+    background: #132043;
+    z-index: 100;
+}
+.menu_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 80px;
+}
+.logo p{
+    font-size: 40px;
+    color: #FDF0F0;
+    font-weight: 700;
+    cursor: pointer;
+}
+.logo span{
+    color: orangered;
+}
+.menu_item ul{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.menu_item ul li{
+    position: relative;
+}
+.menu_item ul li a{
+    color: #FDF0F0;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.2s all linear;
+}
+.menu_item ul li a:hover{
+    color: orangered;
+}
+.menu_item ul li ul{
+    width: 240px;
+    background: #132043;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    line-height: 50px;
+    padding:0px 0px 30px 20px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s all linear;
+    z-index:90;
+}
+.menu_item ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
+.fixed_menu{
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+/* ---------Menubar  Part End---------- */
+
+/* ========Slider Part Start======= */
+#banner{
+    width: 100%;
+    padding: 120px 0;
+    background:#1c2e61 ;
+}
+.slider ul{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.slider ul li button{
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    border: none;
+    transition: 0.2s all linear;
+}
+.slick-active button {
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    background: red;
+}
+.prr{
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s all linear;
+}
+.slider:hover .prr{
+    left: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+.prr:hover{
+    background: orangered;
+    color:white;
+}
+.nrr{
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s all linear;
+}
+.slider:hover .nrr{
+    right: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+.nrr:hover{
+    background: orangered;
+    color:white;
+}
+/* ---------Slider  Part End---------- */
+/* ========Counter Part Start======= */
+#counter{
+    width: 100%;
+    padding: 120px 0;
+    background: #132043;
+}
+.common_heading{
+    width: 550px;
+    margin: 0 auto;
+}
+.common_heading h2{
+    font-size: 35px;
+    font-weight: 700;
+    color: orangered;
+    text-align: center;
+}
+.common_heading p{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding: 15px 0 60px 0;
+}
+.count{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+.counters{
+    display: inline-block;
+}
+.count_item h1, .count_item span{
+    font-size: 70px;
+    font-weight: 600;
+    color: white;
+}
+.count_item p{
+    font-size: 25px;
+    color: orangered;
+    font-weight: 500;
+    text-align: center;
+}
+/* ---------Counter  Part End---------- */
+/* ========Skills Part Start======= */
+#skills{
+    width: 100%;
+    padding: 120px 0;
+    background: #1c2e61;
+}
+.skills_row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.skills_item_col ul{
+    margin-top: 25px;
+}
+.skills_item_col ul li{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    line-height: 70px;
+}
+.skills_bar_col{
+    width: 75%;
+}
+.skills_bar_bg{
+    width: 100%;
+    background: #FDF0F0;
+    margin: 50px auto;
+    padding: 5px 0;
+    border-radius: 10px;
+}
+.skills_bar{
+    width: 0%;
+    height: 10px;
+    background: orangered;
+    border-radius: 5px;
+    transition: 2s all linear;
+}
+.bar1{
+    width: 80%;
+}
+ .bar2{
+    width: 75%;
+}
+.bar3{
+    width: 60%;
+}
+.bar4{
+    width: 50%;
+}
+.bar5{
+    width: 80%;
+}
+.bar6{
+    width: 70%;
+}
+.skills_counter_col{
+    padding-top: 5px;
+}
+.skills_count{
+    margin: 41px 0;
+}
+.skills_counters{
+    display: inline-block;
+    color: white;
+}
+.skills_count span{
+    color: white;
+    font-size: 20px;
+}
+/* ---------Skills  Part End---------- */
+/* ========Services Part Start======= */
+/* ---------Services  Part End---------- */
